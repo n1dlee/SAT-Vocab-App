@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Futuristic SAT Quiz</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="light-theme">
+    <div class="container">
+      <header>
+        <h1>Futuristic SAT Quiz</h1>
+        <div id="theme-selector">
+          <button onclick="setTheme('light-theme')" title="Светлая тема">
+            <i class="fas fa-sun"></i>
+          </button>
+          <button onclick="setTheme('dark-theme')" title="Тёмная тема">
+            <i class="fas fa-moon"></i>
+          </button>
+          <button onclick="setTheme('blue-theme')" title="Синяя тема">
+            <i class="fas fa-water"></i>
+          </button>
+          <button onclick="setTheme('neutral-theme')" title="Нейтральная тема">
+            <i class="fas fa-adjust"></i>
+          </button>
+        </div>
+      </header>
+      <nav id="mode-selector">
+        <button onclick="setMode('word_to_definition')">
+          Word → Definition
+        </button>
+        <button onclick="setMode('definition_to_word')">
+          Definition → Word
+        </button>
+        <button onclick="setMode('definition_to_input')">
+          Definition → Word Entering
+        </button>
+      </nav>
+      <main id="quiz-container">
+        <div id="question-container">
+          <p id="question"></p>
+        </div>
+        <div id="options"></div>
+        <input
+          type="text"
+          id="input-answer"
+          placeholder="Введите ответ здесь"
+          style="display: none"
+        />
+        <p id="result"></p>
+        <button id="next-button">Next question</button>
+      </main>
+      <footer id="score-container">
+        <p>Correct answers: <span id="correct-count">0</span>/10</p>
+        <p>Total questions: <span id="total-count">0</span></p>
+      </footer>
+    </div>
+    <script type="text/javascript" src="/eel.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
